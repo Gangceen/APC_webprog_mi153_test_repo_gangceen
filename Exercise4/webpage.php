@@ -13,15 +13,18 @@
 			background-image: url("background.jpg");
 			color: #66a3ff;
 		}
-		
-		.error {
-			color: #FF0000;
+
+		#q1, #q2, #q3, #q4, #q5{
+			color: #ff0000;
 		}
+
+		.error {color: #FF0000;}
 	</style>
 	</head>
 
-		<body><center>
-			<table>
+		<body>
+		<center>
+			<table id="table">
 			<tr>
 				<th>Field</th>
 				<th>Information</th>
@@ -47,8 +50,12 @@
 				<td>BS Information Technology, Specializing in mobile and internet technology</td>
 			</tr>
 			</table>
-			
-			<p><center>
+
+			<button type="button" onclick="document.getElementById('table').style.fontSize='35px'">
+			Enlarge
+			</button>
+
+			<p>
 			<br>Favorite websites as pastime:
 			<br><a href= "https://www.youtube.com"><img border="0" alt="Youtube" src="youtube.jpg" width=100 height=100></a>
 			<a href= "https://www.facebook.com"><img border="0" alt="Facebook" src="facebook.jpg" width=100 height=100></a>
@@ -63,21 +70,84 @@
 width=100 height=100></a>
 			<a href= "https://minecraft.net/en/"><img border="0" alt="Minecraft" src="minecraft.jpg" width=100 height=100></a>
 			</p>
+
+			<h2> Trivia! </h2>
+
+			<p>
+				1. My most common gaming username:
+			</p>
+
+			<p id="q1">
+				ANSWER
+			</p>
+
+			<button type="button" onclick="document.getElementById('q1').innerHTML = 'NZAAXD or VoidDoubleA'">Click to see answer</button>
+
+			<p>
+				2. My favorite subject:
+			</p>
+
+			<p id="q2">
+				ANSWER
+			</p>
+
+			<button type="button" onclick="document.getElementById('q2').innerHTML = 'Anything that has Math'">Click to see answer</button>
+
+			<p>
+				3. How long have I been playing Magic?
+			</p>
+
+			<p id="q3">
+				ANSWER
+			</p>
+
+			<button type="button" onclick="document.getElementById('q3').innerHTML = 'Started on September 2016'">Click to see answer</button>
+
+			<p>
+				4. What else do you do in your free time?
+			</p>
+
+			<p id="q4">
+				ANSWER
+			</p>
+
+			<button type="button" onclick="document.getElementById('q4').innerHTML = 'Play on my PS3, or play basketball with friends.'">Click to see answer</button>
+
+			<p>
+				5. Where do you go to buy magic cards?
+			</p>
+
+			<p id="q5">
+				ANSWER
+			</p>
+
+			<button type="button" onclick="document.getElementById('q5').innerHTML = 'Hobby shops in taft or SM Megamall, or in Neutral grounds.'">Click to see answer</button>
+
 			</center>
-			
 			<?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$nameErr = $emailErr = $NicknameErr = $genderErr = $websiteErr = $cellnumErr = "";
+$name = $email = $Nickname = $gender = $address = $website = $cellnum = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed"; 
+    if (!preg_match("/^[a-zA-Z0-9 ]*$/",$name)) {
+      $nameErr = "Only letters, white space and numbers are allowed"; 
+    }
+  }
+  
+  if (empty($_POST["Nickname"])) {
+    $NicknameErr = "Name is required";
+  } else {
+    $Nickname = test_input($_POST["Nickname"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$Nickname)) {
+      $NicknameErr = "Only letters and white space allowed"; 
     }
   }
   
@@ -90,73 +160,86 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $emailErr = "Invalid email format"; 
     }
   }
-    
-  if (empty($_POST["website"])) {
-    $website = "";
+  
+  if (empty($_POST["address"])) {
+    $address = "";
   } else {
-    $website = test_input($_POST["website"]);
-    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-      $websiteErr = "Invalid URL"; 
-    }
+    $address = test_input($_POST["address"]);
   }
-
-  if (empty($_POST["comment"])) {
-    $comment = "";
-  } else {
-    $comment = test_input($_POST["comment"]);
-  }
-
+  
   if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
   } else {
     $gender = test_input($_POST["gender"]);
   }
+  
+  if (empty($_POST["cellnum"])) {
+    $cellnumErr = "Cell phone number is required";
+  } else {
+    $cellnum = test_input($_POST["cellnum"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[0-9]*$/",$cellnum)) {
+      $cellnumErr = "Only numbers are allowed"; 
+    }
+  }
+  
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
 }
-
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
 }
-?>
-
-<h2>PHP Form Validation Example</h2>
-<p><span class="error">* required field.</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
+		?>
+	
+		<h1>User Information</h1>
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		Name: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+		Nickname: <input type="text" name="Nickname" value="<?php echo $Nickname;?>">
+  <span class="error">* <?php echo $NicknameErr;?></span>
+  <br><br>
+		E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
-  <span class="error"><?php echo $websiteErr;?></span>
+		Home address: <textarea name="address" rows="5" cols="40"><?php echo $address;?></textarea>
   <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <br><br>
-  Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+		Gender:
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Male") echo "checked";?> value="Female">Male
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Female") echo "checked";?> value="Male">Female
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
-
-<?php
+		Cell phone number: <input type="text" name="cellnum" value="<?php echo $cellnum;?>">
+  <span class="error">* <?php echo $cellnumErr;?></span>
+  <br><br>
+		Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+  <br><br>
+		<input type="submit" name="submit" value="Submit">  
+		</form>
+		
+		<?php
 echo "<h2>Your Input:</h2>";
 echo $name;
+echo "<br>";
+echo $Nickname;
 echo "<br>";
 echo $email;
 echo "<br>";
 echo $website;
 echo "<br>";
-echo $comment;
+echo "Lives in $address";
 echo "<br>";
 echo $gender;
-?>
-
+echo "<br>";
+echo $cellnum;
+echo "<br>";
+echo $comment;
+		?>
 		</body>
-
 </html>
