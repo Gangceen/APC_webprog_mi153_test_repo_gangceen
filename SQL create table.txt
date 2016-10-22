@@ -1,0 +1,1 @@
+CREATE TABLE UserInfo(User_ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, Name Varchar(50) NOT NULL, Nickname Varchar(20) NOT NULL, Email Varchar(60) NOT NULL, Home_Address Varchar(100), Gender Varchar(8) NOT NULL, Cp_Num Varchar(15) NOT Null, Comment Varchar(150));
