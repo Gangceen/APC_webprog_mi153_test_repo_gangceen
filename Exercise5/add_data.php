@@ -6,6 +6,10 @@ if(isset($_POST['btn-save']))
  $full_name = $_POST['full_name'];
  $nickname = $_POST['nickname'];
  $email = $_POST['email'];
+ $address = $_POST['address'];
+ $gender = $_POST['gender'];
+ $cp_num = $_POST['cp_num'];
+ $comment = $_POST['comment'];
  // variables for input data
  
  // sql query for inserting data into database
