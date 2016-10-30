@@ -2,20 +2,24 @@
 include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
- $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
+ $sql_query="SELECT * FROM userinfo WHERE user_id=".$_GET['edit_id'];
  $result_set=mysql_query($sql_query);
  $fetched_row=mysql_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
+ $full_name = $_POST['full_name'];
+ $nickname = $_POST['nickname'];
+ $email = $_POST['email'];
+ $address = $_POST['address'];
+ $gender = $_POST['gender'];
+ $cp_num = $_POST['cp_num'];
+ $comment = $_POST['comment'];
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name' WHERE user_id=".$_GET['edit_id'];
+ $sql_query = "UPDATE userinfo SET full_name='$full_name',nickname='$nickname',email='$email',address='$address',gender='$gender',cp_num='$cp_num',comment='$comment' WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
