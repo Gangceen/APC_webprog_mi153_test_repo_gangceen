@@ -22,7 +22,7 @@ if(isset($_POST['btn-save']))
  
 }
 ?>
-<html
+<html>
 <head>
 </head>
 <body>
