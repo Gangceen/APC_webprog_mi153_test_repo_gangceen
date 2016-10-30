@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$datbase = "websiteusers";
+$datbase = "website";
 mysql_connect($host,$user,$password);
 mysql_select_db($datbase);
 ?>
