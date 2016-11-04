@@ -29,6 +29,7 @@ function delete_id(id)
  }
 }
 </script>
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <center>
@@ -43,7 +44,7 @@ function delete_id(id)
  <div id="content">
     <table align="center">
     <tr>
-    <th colspan="5"><a href="add_data.php">add data here.</a></th>
+    <th colspan="11"><a href="add_data.php">Add data here.</a></th>
     </tr>
     <th>Full Name</th>
     <th>Nickname</th>
