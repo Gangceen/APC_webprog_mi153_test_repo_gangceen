@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
 include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
@@ -14,16 +15,18 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO userinfo(full_name,nickname,email,address,gender,cp_num,comment) 
+        $sql_query = "INSERT INTO userinfo(Name,Nickname,Email,Home_address,Gender,Cp_Num,Comment) 
 		VALUES('$full_name','$nickname','$email','$address','$gender','$cp_num','$comment')";
- mysqli_query($con, $sql_query);
+ mysqli_query($con,$sql_query);
         
         // sql query for inserting data into database
  
 }
 ?>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>

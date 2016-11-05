@@ -3,8 +3,8 @@ include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
  $sql_query="SELECT * FROM userinfo WHERE user_id=".$_GET['edit_id'];
- $result_set=mysql_query($sql_query);
- $fetched_row=mysql_fetch_array($result_set);
+ $result_set=mysqli_query($con,$sql_query);
+ $fetched_row=mysqli_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
@@ -19,11 +19,14 @@ if(isset($_POST['btn-update']))
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE userinfo SET full_name='$full_name',nickname='$nickname',email='$email',address='$address',gender='$gender',cp_num='$cp_num',comment='$comment' WHERE user_id=".$_GET['edit_id'];
+ $sqli_query = "UPDATE userinfo SET Name='$full_name',
+ Nickname='$nickname',Email='$email',Home_Address='$address',
+ Gender='$gender',Cp_Num='$cp_num',Comment='$comment' 
+ WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
- if(mysql_query($sql_query))
+ if(mysqli_query($con, $sqli_query))
  {
   ?>
   <script type="text/javascript">
@@ -47,8 +50,12 @@ if(isset($_POST['btn-cancel']))
  header("Location: index.php");
 }
 ?>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <center>
@@ -64,28 +71,25 @@ if(isset($_POST['btn-cancel']))
     <form method="post">
     <table align="center">
     <tr>
-    <td align="center"><a href="index.php">back to main page</a></td>
+    <td><input type="text" name="full_name" placeholder="Full Name" value="<?php echo $fetched_row['Name']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="full_name" placeholder="Full Name" required /></td>
+    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $fetched_row['Nickname']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="nickname" placeholder="Nickname" required /></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="email" placeholder="Email" required /></td>
+    <td><input type="text" name="email" placeholder="Email" value="<?php echo $fetched_row['Email']; ?>" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="address" placeholder="Address" /></td>
+    <td><input type="text" name="address" placeholder="Address" value="<?php echo $fetched_row['Home_Address']; ?>" /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="gender" placeholder="Gender" required /></td>
+    <td><input type="text" name="gender" placeholder="Gender" value="<?php echo $fetched_row['Gender']; ?>" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="cp_num" placeholder="Cellphone number" required /></td>
+    <td><input type="text" name="cp_num" placeholder="Cellphone number" value="<?php echo $fetched_row['Cp_Num']; ?>" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="comment" placeholder="Comment" required /></td>
+    <td><input type="text" name="comment" placeholder="Comment" value="<?php echo $fetched_row['Comment']; ?>" required /></td>
     </tr>
     <tr>
     <td>
