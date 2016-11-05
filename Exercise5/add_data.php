@@ -14,9 +14,9 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO userinfo(full_name,nickname,email) 
-		VALUES('$full_name','$nickname','$email')";
- mysql_query($sql_query);
+        $sql_query = "INSERT INTO userinfo(full_name,nickname,email,address,gender,cp_num,comment) 
+		VALUES('$full_name','$nickname','$email','$address','$gender','$cp_num','$comment')";
+ mysqli_query($con, $sql_query);
         
         // sql query for inserting data into database
  
@@ -24,6 +24,7 @@ if(isset($_POST['btn-save']))
 ?>
 <html>
 <head>
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <center>

@@ -57,8 +57,8 @@ function delete_id(id)
     </tr>
     <?php
  $sql_query="SELECT * FROM userinfo";
- $result_set=mysql_query($sql_query);
- while($row=mysql_fetch_row($result_set))
+ $result_set=mysqli_query($con,$sql_query);
+ while($row=mysqli_fetch_row($result_set))
  {
   ?>
         <tr>
