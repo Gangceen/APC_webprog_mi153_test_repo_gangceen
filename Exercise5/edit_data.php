@@ -31,7 +31,7 @@ if(isset($_POST['btn-update']))
   ?>
   <script type="text/javascript">
   alert('Data Are Updated Successfully');
-  window.location.href='index.php';
+  window.location.href='webpage.php';
   </script>
   <?php
  }
@@ -47,22 +47,20 @@ if(isset($_POST['btn-update']))
 }
 if(isset($_POST['btn-cancel']))
 {
- header("Location: index.php");
+ header("Location: webpage.php");
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
-<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <center>
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    <label>Edit your feedback</label>
     </div>
 </div>
 
