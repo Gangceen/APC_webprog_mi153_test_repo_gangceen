@@ -1,6 +1,6 @@
 <html>
 	<?php
-	include_once 'dbconfig.php';
+	//include_once 'dbconfig.php';
 
 	// delete condition
 	if(isset($_GET['delete_id']))
