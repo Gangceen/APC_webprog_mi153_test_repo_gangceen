@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost/APC_webprog_mi153_test_repo_gangceen/Exe
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = 'website.php';
 
 /*
 |--------------------------------------------------------------------------
