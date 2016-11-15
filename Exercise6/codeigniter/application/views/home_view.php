@@ -49,7 +49,7 @@ function delete_id(id)
 {
  if(confirm('Sure to Delete ?'))
  {
-  window.location.href='home_view.php?delete_id='+id;
+  window.location.href='codeigniter/application/views/home_view.php?delete_id='+id;
  }
 }
 </script>
