@@ -1,4 +1,16 @@
 <html>
+	<?php
+	include_once 'dbconfig.php';
+
+	// delete condition
+	if(isset($_GET['delete_id']))
+	{
+	$sql_query="DELETE FROM userinfo WHERE user_id=".$_GET['delete_id'];
+	mysqli_query($con,$sql_query);
+	header("Location: $_SERVER[PHP_SELF]");
+	}
+	// delete condition
+	?>
 	<head>
 		<div class="header">
 		<h1><i><center>
