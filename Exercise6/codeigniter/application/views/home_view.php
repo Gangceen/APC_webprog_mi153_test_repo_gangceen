@@ -153,7 +153,6 @@ width=100 height=100></a>
 			<button type="button" onclick="document.getElementById('q5').innerHTML = 'Hobby shops in taft or SM Megamall, or in Neutral grounds.'">Click to see answer</button>
 			</center>
 			</body>
-			<div class="footer">
 			<?php
 // define variables and set to empty values
 $nameErr = $emailErr = $NicknameErr = $genderErr = $cellnumErr = "";
