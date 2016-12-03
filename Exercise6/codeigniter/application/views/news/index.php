@@ -17,6 +17,10 @@
 		#q1, #q2, #q3, #q4, #q5{
 			color: #ff0000;
 		}
+		
+		#Visitors{
+			background-color: black
+		}
 
 		.error {color: #FF0000;}
 	</style>
@@ -125,6 +129,7 @@ width=100 height=100></a>
 
 			</center>
 
+<div id = "Visitors">
 <h2><?php echo $title; ?></h2>
 
 <table border='1' cellpadding='4'>
@@ -155,3 +160,4 @@ width=100 height=100></a>
         </tr>
 <?php endforeach; ?>
 </table>
+</div>
