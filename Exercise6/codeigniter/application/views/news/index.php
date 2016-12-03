@@ -3,7 +3,7 @@
 	<head>
 		<h1><i><center><font color = #1a75ff>Le Personal Webpage</font></center></i></h1>
 	<style>
-		table, th, td {
+		#PI{
 			border: 1px solid blue;
 			color: #66a3ff;
 			width: 50%;
@@ -24,30 +24,30 @@
 
 		<body>
 		<center>
-			<table id="table">
+			<table id="PI">
 			<tr>
-				<th>Field</th>
-				<th>Information</th>
+				<th id="PI">Field</th>
+				<th id="PI">Information</th>
 			</tr>
 			<tr>
-				<td>Name</td>
-				<td>Gabriel Angelo Agito Ngceen</td>
+				<td id="PI">Name</td>
+				<td id="PI">Gabriel Angelo Agito Ngceen</td>
 			</tr>
 			<tr>
-				<td>Nickname:</td>
-				<td>Gabby/Gab</td>
+				<td id="PI">Nickname:</td>
+				<td id="PI">Gabby/Gab</td>
 			</tr>
 			<tr>
-				<td>Birthdate:</td>
-				<td>January 1, 2000</td>
+				<td id="PI">Birthdate:</td>
+				<td id="PI">January 1, 2000</td>
 			</tr>
 			<tr>
-				<td>Age:</td>
-				<td>16</td>
+				<td id="PI">Age:</td>
+				<td id="PI">16</td>
 			</tr>
 			<tr>
-				<td>Course:</td>
-				<td>BS Information Technology, Specializing in mobile and internet technology</td>
+				<td id="PI">Course:</td>
+				<td id="PI">BS Information Technology, Specializing in mobile and internet technology</td>
 			</tr>
 			</table>
 
@@ -124,6 +124,8 @@ width=100 height=100></a>
 			<button type="button" onclick="document.getElementById('q5').innerHTML = 'Hobby shops in taft or SM Megamall, or in Neutral grounds.'">Click to see answer</button>
 
 			</center>
+
+<h2><?php echo $title; ?></h2>
 
 <table border='1' cellpadding='4'>
     <tr>
