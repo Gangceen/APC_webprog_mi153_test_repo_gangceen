@@ -42,4 +42,20 @@ $this->params['breadcrumbs'][] = $this->title;
 				<td>BS Information Technology, Specializing in mobile and internet technology</td>
 			</tr>
 			</table>
+			
+			<p><center>
+			<br>Favorite websites as pastime:
+			<br><a href= "https://www.youtube.com"><img border="0" alt="Youtube" src="youtube.jpg" width=100 height=100></a>
+			<a href= "https://www.facebook.com"><img border="0" alt="Facebook" src="facebook.jpg" width=100 height=100></a>
+			<a href= "https://www.twitter.com"><img border="0" alt="Twitter" src="twitter.jpg" width=100 height=100></a>
+			</p>
+
+			<p>
+			<br>Favorite games:
+			<br><a href= "https://lol.garena.ph/"><img border="0" alt="League of Legends" src="lol.jpg" width=100 height=100></a>
+			<a href= "http://store.steampowered.com/app/316010/"><img border="0" alt="Magic:The Gathering" src="MTG.jpg" 
+
+width=100 height=100></a>
+			<a href= "https://minecraft.net/en/"><img border="0" alt="Minecraft" src="minecraft.jpg" width=100 height=100></a>
+			</p>
 </div>
