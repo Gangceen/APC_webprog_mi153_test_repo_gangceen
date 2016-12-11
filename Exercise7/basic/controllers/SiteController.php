@@ -71,7 +71,7 @@ class SiteController extends Controller
      * Lists all Userinfo models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionComment()
     {
         $searchModel = new UserinfoSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
