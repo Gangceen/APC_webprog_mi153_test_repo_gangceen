@@ -100,17 +100,9 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionContact()
+    public function actionTrivia()
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
+        return $this->render('trivia');
     }
 
     /**
