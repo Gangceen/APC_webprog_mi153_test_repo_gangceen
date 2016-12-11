@@ -39,7 +39,7 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Trivia', 'url' => ['/site/trivia']],
-			['label' => 'Comment', 'url' => ['/site/commentIndex']]
+			['label' => 'Comment', 'url' => ['/userinfo/index']]
         ],
     ]);
     NavBar::end();
