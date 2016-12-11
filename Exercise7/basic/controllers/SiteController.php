@@ -77,4 +77,15 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+	
+	public function actionCommentIndex()
+	{
+		$searchModel = new UserinfoSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+	}
 }
