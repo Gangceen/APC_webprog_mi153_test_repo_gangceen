@@ -19,7 +19,7 @@ $this->title = 'Exercise 7 Application';
 		
 	</div>
 
-    <div class="body-content">
+    <div class="body">
 				
         <div class="row">
             <div class="col-lg-4">
