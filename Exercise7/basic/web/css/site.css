@@ -27,8 +27,9 @@ body {
     text-align: center;
 	background-image: url(../images/background.jpg);
 	background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-attachment: stretch;
+	background-position: center;
+	color: white;
 }
 
 .jumbotron .btn {
