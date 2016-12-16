@@ -23,7 +23,8 @@ body {
 
 .jumbotron {
     text-align: center;
-    background-color: transparent;
+	background-image: <?php echo Yii::$app->request->baseUrl . "/Images/background.jpg";?>
+    background-color: black;
 }
 
 .jumbotron .btn {
