@@ -20,11 +20,14 @@ body {
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
-
+.backdrop{
+	background-image: url(Images/'background.jpg');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
 .jumbotron {
     text-align: center;
-	background-image: <?php echo Yii::$app->request->baseUrl . "/Images/background.jpg";?>
-    background-color: black;
 }
 
 .jumbotron .btn {
