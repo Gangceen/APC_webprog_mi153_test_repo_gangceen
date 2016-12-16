@@ -54,6 +54,6 @@ $this->params['breadcrumbs'][] = $this->title;
 			<br>Favorite games:
 			<br><a href= "https://lol.garena.ph/"><img border="0" alt="League of Legends" src=<?php echo Yii::$app->request->baseUrl . "/Images/lol.jpg";?> width=100 height=100></a>
 			<a href= "http://store.steampowered.com/app/316010/"><img border="0" alt="Magic:The Gathering" src=<?php echo Yii::$app->request->baseUrl . "/Images/MTG.jpg";?> width=100 height=100></a>
-			<a href= "https://minecraft.net/en/"><img border="0" alt="Minecraft" src<?php echo Yii::$app->request->baseUrl . "/Images/minecraft.jpg";?> width=100 height=100></a>
+			<a href= "https://minecraft.net/en/"><img border="0" alt="Minecraft" src=<?php echo Yii::$app->request->baseUrl . "/Images/minecraft.jpg";?> width=100 height=100></a>
 			</p>
 </div>
