@@ -5,3 +5,8 @@ Insert into trivia VALUES(2, 'Favorite subject/s?', 'In general, anything that i
 Insert into trivia VALUES(3, 'What do I do in my spare time?', 'Play games (PS3/Computer), and play basketball. Occasionally, I play magic with my friends as well.');
 Insert into trivia VALUES(4, 'Do you have any social media accounts?', 'Yes, Facebook(Gabby Ngceen), and on twitter(@Ngceenzoned).');
 Insert into trivia VALUES(5, 'Since when did you start playing Magic?', 'Around September.');
+Insert into trivia VALUES(6, 'Subject/s that you despise?', 'Anything that has history, because I am not good at memorizing events.');
+Insert into trivia VALUES(7, 'When do you study for a big exam?', 'It depends. If I know what its about, I refresh my mind a day before the exam. If not, A week before');
+Insert into trivia VALUES(8, 'What games do you play?', 'League of Legends, Any FPS games, and Rocket league.');
+Insert into trivia VALUES(9, 'What would you say this website lacks?', 'Design. It looks way too plain. Too bad I do not know how to design it :P ');
+Insert into trivia VALUES(10, 'Do you like memes?', 'Yeeeeeeeeeessssssssssssss');
