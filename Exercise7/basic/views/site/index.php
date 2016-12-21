@@ -4,7 +4,7 @@
 
 $this->title = 'Exercise 7 Application';
 ?>
-<body class="background">
+<body>
 
     <div class="jumbotron">
         <h1>Welcome!</h1>
