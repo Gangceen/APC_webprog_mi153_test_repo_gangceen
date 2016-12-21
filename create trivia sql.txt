@@ -1,1 +1,4 @@
 CREATE TABLE trivia(User_ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, Question Varchar(500) NOT NULL, Answer Varchar(100) NOT NULL)
+
+Insert into trivia VALUES(1, 'My gaming username?', 'VoidDoubleA');
+Insert into trivia VALUES(2, 'Favorite subject/s?', 'In general, anything that involves logic (i.e. Math, Computers, etc)');
