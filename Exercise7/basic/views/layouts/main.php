@@ -38,7 +38,7 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Trivia', 'url' => ['/site/trivia']],
+            ['label' => 'Trivia', 'url' => ['/trivia/index']],
 			['label' => 'Comments', 'url' => ['/userinfo/index']]
         ],
     ]);
