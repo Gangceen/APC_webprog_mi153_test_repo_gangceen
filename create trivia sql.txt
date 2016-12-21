@@ -2,3 +2,6 @@ CREATE TABLE trivia(User_ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, Questio
 
 Insert into trivia VALUES(1, 'My gaming username?', 'VoidDoubleA');
 Insert into trivia VALUES(2, 'Favorite subject/s?', 'In general, anything that involves logic (i.e. Math, Computers, etc)');
+Insert into trivia VALUES(3, 'What do I do in my spare time?', 'Play games (PS3/Computer), and play basketball. Occasionally, I play magic with my friends as well.');
+Insert into trivia VALUES(4, 'Do you have any social media accounts?', 'Yes, Facebook(Gabby Ngceen), and on twitter(@Ngceenzoned).');
+Insert into trivia VALUES(5, 'Since when did you start playing Magic?', 'Around September.');
