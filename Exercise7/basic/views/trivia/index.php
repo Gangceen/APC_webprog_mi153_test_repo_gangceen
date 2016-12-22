@@ -1,21 +1,28 @@
 <?php
-
 use yii\helpers\Html;
-use yii\widgets\ListView;
-
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\TriviaSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Trivias';
-$this->params['breadcrumbs'][] = $this->title;
+use yii\widgets\LinkPager;
 ?>
-<div class="trivia-index">
-    <?= ListView::widget([
-        'dataProvider' => $dataProvider,
-        'itemOptions' => ['class' => 'item'],
-        'itemView' => function ($model, $key, $index, $widget) {
-            return Html::a(Html::encode($model->User_ID), ['view', 'id' => $model->User_ID]);
-        },
-    ]) ?>
-</div>
+<html>
+<head>
+<style>
+body{
+
+
+}</style>
+</head>
+<body>
+<br>
+<br>
+<h1>Trivia</h1>
+<ul>
+<?php foreach ($trivia as $trivias): ?>
+    <li>
+        <?= Html::encode("{$trivias->trivia}") ?>:
+        <h5>Answer: </h5>
+        <strong><?= Html::encode("({$trivias->answer})") ?>: </strong>
+    </li>
+    <br>
+<?php endforeach; ?>
+</ul>
+</body>
+
